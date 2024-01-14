@@ -1,10 +1,7 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 public class Main {
-
-    import java.util.List;
-    import java.util.ArrayList;
-    import java.util.Collections;
-    import java.util.sort;
-
     public static void main(String[] args) {
         List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
         for (Integer num : nums) {
@@ -33,5 +30,28 @@ public class Main {
             }
             System.out.println(set);
         }
+        List<String> strings = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
+        Set<String> set = new HashSet<>(strings);
+        System.out.println(set);
+        Map<String, Integer> map = HashMap <>();
+        for (String string : strings) {
+            if (map.containsKey(string)) {
+                Integer quantity = map.get(string);
+                map.put(string, quantity + 1);
+                map.put(string, 1);
+
+            }
+            for (Map.Entry<String, Integer> entry : map.entrySet()) {
+                if (entry.getValue() == 1) {
+                    System.out.println(entry.getKey());
+                }
+            }
+            for (Integer value : map.values()) {
+                System.out.println(value);
+            }
+
+
+        }
+
     }
 }
