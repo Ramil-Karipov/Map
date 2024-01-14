@@ -1,0 +1,9 @@
+public class Main {
+
+    import java.util.List;
+    import java.util.ArrayList;
+
+    public static void main(String[] args) {
+        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+    }
+}
